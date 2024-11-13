@@ -1,47 +1,55 @@
 using UnityEngine;
 
-public class playerswitch : MonoBehaviour
+public class PlayerSwitch : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public GameObject Character1;
-    public GameObject Character2;
+    public GameObject Player;
+    public GameObject Lamb;
 
-    private Movement movementcharacter1;
-    private Movement movementcharacter2;
+    private Movement movementCharacter1;
+    private Movement movementCharacter2;
     private bool characterOn = true;
+
+  
+    public CameraFollow cameraFollow;
 
     private void Start()
     {
-        movementcharacter1 = Character1.GetComponent<Movement>();
-        movementcharacter2 = Character2.GetComponent<Movement>();
+        movementCharacter1 = Player.GetComponent<Movement>();
+        movementCharacter2 = Lamb.GetComponent<Movement>();
+
+        movementCharacter1.enabled = true;
+        movementCharacter2.enabled = false;
+
+        cameraFollow.SetTarget(Player.transform);
     }
-    // Update is called once per frame
+
     void Update()
     {
         HandleForm();
     }
+
     private void HandleForm()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-
-            if (characterOn == true)
+            if (characterOn)
             {
-                //Character2.SetActive(true);
-                //Character1.SetActive(false);
-                movementcharacter1.enabled = false;
-                movementcharacter2.enabled = true;
+                movementCharacter1.enabled = false;
+                movementCharacter2.enabled = true;
+
+                cameraFollow.SetTarget(Lamb.transform);
+
                 characterOn = false;
             }
             else
             {
-                //Character1.SetActive(true);
-                //Character2.SetActive(false);
-                movementcharacter1.enabled = true;
-                movementcharacter2.enabled = false;
+                movementCharacter1.enabled = true;
+                movementCharacter2.enabled = false;
+
+                cameraFollow.SetTarget(Player.transform);
+
                 characterOn = true;
             }
-
         }
     }
 }
