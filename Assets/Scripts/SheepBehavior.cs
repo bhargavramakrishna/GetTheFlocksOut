@@ -15,13 +15,14 @@ public class SheepBehavior : MonoBehaviour
         grassBar.value = 0;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Grass"))
+        if (collision.gameObject.CompareTag("Grass"))
         {
-            EatGrass(other.gameObject);
+            EatGrass(collision.gameObject);
         }
     }
+
 
     private void EatGrass(GameObject grass)
     {
