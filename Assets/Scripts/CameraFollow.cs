@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    private Vector3 offset = new Vector3(0f, 5f, -15f); // Posição da câmera relativa ao jogador
+    public float xvalue;
+    public float yvalue;
+    public float zvalue;
+
+    private Vector3 offset = new Vector3(0f, 10f, -15f); // Posição da câmera relativa ao jogador
     private float smoothSpeed = 0.01f; // A suavidade do movimento da câmera
 
     [HideInInspector]
