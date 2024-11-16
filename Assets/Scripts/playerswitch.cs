@@ -7,6 +7,8 @@ public class PlayerSwitch : MonoBehaviour
 
     private Movement movementCharacter1;
     private Movement movementCharacter2;
+    public  Canvas canvas1;
+    public  Canvas canvas2;
     private bool characterOn = true;
 
   
@@ -36,7 +38,8 @@ public class PlayerSwitch : MonoBehaviour
             {
                 movementCharacter1.enabled = false;
                 movementCharacter2.enabled = true;
-
+                canvas1.enabled = false;
+                canvas2.enabled = true;
                 cameraFollow.SetTarget(Lamb.transform);
 
                 characterOn = false;
@@ -45,6 +48,8 @@ public class PlayerSwitch : MonoBehaviour
             {
                 movementCharacter1.enabled = true;
                 movementCharacter2.enabled = false;
+                canvas1.enabled = true;
+                canvas2.enabled = false;
 
                 cameraFollow.SetTarget(Player.transform);
 
