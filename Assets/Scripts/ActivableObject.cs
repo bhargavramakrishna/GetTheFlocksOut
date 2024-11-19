@@ -17,8 +17,8 @@ public class ActivableObject : MonoBehaviour, IActivable
 
     void Update()
     {
-        Wallmovement();
 
+        Wallmovement();
 
     }
 

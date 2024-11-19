@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
 
     // Reference to the child object's Transform (sprite)
     private Transform childSpriteTransform;
+    //private Transform childSpriteKeyTransform; later to fix the key sprite
 
     // Movement speed of the player
     [SerializeField]
@@ -21,6 +22,7 @@ public class Movement : MonoBehaviour
 
         // Get the only child transform (assumes there is only one child)
         childSpriteTransform = transform.GetChild(0);
+        //childSpriteKeyTransform = transform.GetChild(2); later to fix sprite key
 
         // Log an error if the child was not found
         if (childSpriteTransform == null)
@@ -62,6 +64,7 @@ public class Movement : MonoBehaviour
 
             // Rotate the child object locally on the X-axis
             childSpriteTransform.localEulerAngles = new Vector3(-30, 0, 0);
+            
         }
         // Check if player is moving right
         else if (horizontal > 0)
@@ -71,6 +74,7 @@ public class Movement : MonoBehaviour
 
             // Reset the child object's local rotation
             childSpriteTransform.localEulerAngles = new Vector3(30, 0, 0);
+           // childSpriteKeyTransform.localEulerAngles = new Vector3(30, 0, 0); later for the key sprite fixing
         }
     }
 }

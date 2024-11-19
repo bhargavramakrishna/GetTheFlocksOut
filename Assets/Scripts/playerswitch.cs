@@ -22,6 +22,9 @@ public class PlayerSwitch : MonoBehaviour
         movementCharacter1.enabled = true;
         movementCharacter2.enabled = false;
 
+        canvas1.enabled = true;
+        canvas2.enabled = false;
+
         cameraFollow.SetTarget(Player.transform);
     }
 

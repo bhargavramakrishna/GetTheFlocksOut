@@ -7,9 +7,8 @@ public class SheepBehavior : MonoBehaviour
     [SerializeField]
     private Slider grassBar;
     private float grassConsumptionRate = 30f;
-    //UI
-    [SerializeField]
-    private GameObject Key;
+    
+    
 
 
 
@@ -24,11 +23,7 @@ public class SheepBehavior : MonoBehaviour
         {
             EatGrass(collision.gameObject);
         }
-        if(collision.gameObject.CompareTag("key"))
-        {
-            Key.SetActive(true);
-            Destroy(collision.gameObject);
-        }
+     
     }
 
 
