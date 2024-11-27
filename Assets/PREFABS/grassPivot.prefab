@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d66510809396f4841a7dc0f68a69aa3a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7926118655abeb40bb90c9d3bb68caf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -192,6 +192,10 @@ PrefabInstance:
     - target: {fileID: 4208433571276557771, guid: b12c3c636728bb44192e9087b0beaaae, type: 3}
       propertyPath: m_Name
       value: simlegrass
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986651480309403488, guid: b12c3c636728bb44192e9087b0beaaae, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
