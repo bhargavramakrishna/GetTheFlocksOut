@@ -7,11 +7,14 @@ TagManager:
   - Grass
   - key
   - sheep
+  - rock
+  - wall
+  - portal
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - background

@@ -6,11 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: a5794998ac7b14a4c9b92e7afb5d9e9a
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 863c72bd0431a2343bd05c0e7a84578b
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Azurite's Puzzle 1.unity
+    guid: bd916f3d42622674c8ed0401167423ab
+  - enabled: 1
+    path: Assets/Scenes/Visualcreed's Puzzle 1.unity
+    guid: 51871537b2c9d274c81e6db3ec6946ce
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
